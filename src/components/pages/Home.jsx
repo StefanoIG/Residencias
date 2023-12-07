@@ -6,7 +6,7 @@ import Hotel from "../.././../imagenes/foto6.jpg"
 import foto5 from "../.././../imagenes/foto5.jpg"
 import foto4 from "../.././../imagenes/foto4.jpg"
 import foto3 from "../.././../imagenes/foto3.jpg"
-import foto2 from "../.././../imagenes/foto2.jpg"
+import foto2 from "../.././../imagenes/Foto2.jpg"
 import foto11 from "../.././../imagenes/foto11.jpg"
 import foto12 from "../.././../imagenes/foto12.jpg"
 
