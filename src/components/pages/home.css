@@ -1,0 +1,91 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 20px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+ }
+ li {
+    list-style: none;
+ }
+ li:hover {
+    text-decoration: underline;
+    color: white;
+ }
+ a {
+    text-decoration: none;
+ }
+.bold-text {
+    font-weight: bold;
+}
+ .text-white {
+    color: white;
+ }
+.xl-text {
+    font-size: 40px;
+}
+h1 {
+    margin: 30px 0;
+}
+.l-white {
+    font-size: 32px;
+}
+.bg-image {
+    height: 70vh;
+    background-image: url(../../../public/foto9.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+.bg-image > div {
+    text-align: center;
+}
+#hotel {
+    width: 300px;
+    height: auto;
+}
+.second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    padding: 20px;
+}
+.texto {
+    padding: 20px;
+}
+.detalles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.card > img{
+    width: 300px;
+    height: auto;
+}
