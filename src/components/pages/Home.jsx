@@ -43,12 +43,12 @@ const Home = () => {
                     </ul>
                     </header>
                     <div>
-                        <h1 className="text-white xl-text">Bienvenidos a la recidencia Universitaria ULEAM</h1>
-                        <h3 className="text-white l-text" >La recidencia de mejor categoria para estudiantes Universitarios</h3>
+                        <h1 className="text-white xl-text">Bienvenidos a la residencia Universitaria ULEAM</h1>
+                        <h3 className="text-white l-text" >La residencia de mejor categoria para estudiantes Universitarios</h3>
                     </div>
                 </section>
                 <section className="second">
-                    <h1>Conoce sobre nuestra Recidencia</h1>
+                    <h1>Conoce sobre nuestra Residencia</h1>
                     <div className="text-container">
                         <div>
                             <img src={Hotel} alt="hotel" id="hotel" />
@@ -66,7 +66,7 @@ const Home = () => {
                     </div>
                 </section>
                 <section className="detalles">
-                    <h1>Detalle sobre nuestra recidencias</h1>
+                    <h1>Detalle sobre nuestra residencias</h1>
                     <div>
                         <div className="card-container">
                             <div className="card">

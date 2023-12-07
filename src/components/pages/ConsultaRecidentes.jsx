@@ -60,7 +60,7 @@ const ConsultaRecidentes = () => {
     </header>
     <div className="form-container">
         <div className="form-card">
-          <h1>Consulta de Residentes</h1>
+          <h1>Consulta de las residencia ULEAM</h1>
           <div>
             {residenciasRegistradas.map((residencia, index) => (
               <div key={index} onClick={() => solicitarResidencia(residencia)}>

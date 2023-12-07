@@ -84,7 +84,7 @@ const ControlAcceso = () => {
       <div className="form-container">
         <div className="form-card">
           <form onSubmit={handleSubmit}>
-            <h1>Control de acceso a la residencia</h1>
+            <h1>Control de acceso a la residencia ULEAM</h1>
             <div className="input-field">
               <label htmlFor="codigo">Código de Acceso:</label>
               <input
