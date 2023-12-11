@@ -5,10 +5,17 @@ import Swal from 'sweetalert2';
 const ConsultaRecidentes = () => {
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [residenciasRegistradas, setResidenciasRegistradas] = useState([]);
+  const [username, setUsername] = useState('');
+
 
   useEffect(() => {
     const signedIn = localStorage.getItem("isSignedIn") === "true";
     setIsSignedIn(signedIn);
+
+    const usuarioData = JSON.parse(localStorage.getItem("userData"));
+    if (usuarioData && usuarioData.username) {
+      setUsername(usuarioData.username);
+    }
 
     const storedData = localStorage.getItem("residenciaData");
     if (storedData) {
@@ -23,15 +30,15 @@ const ConsultaRecidentes = () => {
 
   const solicitarResidencia = (residencia) => {
     Swal.fire({
-      title: `¿Quieres solicitar la residencia "${residencia.nombreResidencia}"?`,
+      title: `¿Quieres dar de baja la residencia "${residencia.nombreResidencia}"?`,
       showCancelButton: true,
-      confirmButtonText: 'Sí, solicitar',
+      confirmButtonText: 'Sí, dar de baja',
       cancelButtonText: 'No, cancelar',
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire(
           'Solicitud enviada',
-          'Tu solicitud para la residencia ha sido enviada. Recibirás una respuesta pronto.',
+          'Tu solicitud para dar de baja residencia ha sido enviada. Recibirás una respuesta pronto.',
           'success'
         );
         // Implementar lógica adicional para la solicitud
@@ -60,16 +67,24 @@ const ConsultaRecidentes = () => {
     </header>
     <div className="form-container">
         <div className="form-card">
-          <h1>Consulta de las residencia ULEAM</h1>
+          <h1>Consulta Residencial ULEAM</h1>
           <div>
-            {residenciasRegistradas.map((residencia, index) => (
+      
+          <div >
+             {residenciasRegistradas.map((residencia, index) => (
               <div key={index} onClick={() => solicitarResidencia(residencia)}>
-                {residencia.nombreResidencia} - Dirección: {residencia.direccion}
+                <p>Nombre: {residencia.nombreResidencia}</p>
+                <p>Dirección: {residencia.direccion}</p>
+                <p>Cantidad de Habitaciones: {residencia.cantidadHabitaciones}</p>
+                <p>Usuario: {username}</p>
               </div>
             ))}
+             </div>
           </div>
         </div>
+        
       </div>
+
   </main>
   )
 }
